@@ -47,9 +47,8 @@ function cartReducer(state, action) {
   
     return state; // return the unchanged state
   }
-  
 
-  export function CartContextProvider({children}){
+  export function CartContextProvider({ children }){
     const [ cart, dispatchCartAction ] = useReducer(cartReducer, { items: [] });
     
     function addItem(item){
